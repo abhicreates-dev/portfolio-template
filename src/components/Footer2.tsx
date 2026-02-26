@@ -1,0 +1,87 @@
+import React, { useRef, useEffect } from "react";
+
+export default function Footer2() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLHeadingElement>(null);
+
+  const mouse = useRef({ x: 0, y: 0 });
+  const smooth = useRef({ x: 0, y: 0 });
+  const raf = useRef<number>();
+
+  useEffect(() => {
+    const animate = () => {
+      // Smooth interpolation (lerp effect)
+      smooth.current.x += (mouse.current.x - smooth.current.x) * 0.08;
+      smooth.current.y += (mouse.current.y - smooth.current.y) * 0.08;
+
+      if (glowRef.current) {
+        glowRef.current.style.setProperty("--x", `${smooth.current.x}px`);
+        glowRef.current.style.setProperty("--y", `${smooth.current.y}px`);
+      }
+
+      raf.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+    return () => cancelAnimationFrame(raf.current!);
+  }, []);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    mouse.current.x = e.clientX - rect.left;
+    mouse.current.y = e.clientY - rect.top;
+  };
+
+  return (
+    <footer className="mt-5 flex flex-col items-center justify-center relative overflow-hidden">
+      <div className="flex flex-col items-center w-full px-4">
+        
+        <div
+          ref={containerRef}
+          onMouseMove={handleMouseMove}
+          className="relative inline-block"
+        >
+          {/* Base Text */}
+          <h1 className="text-8xl md:text-[12rem] font-extrabold tracking-tighter text-white/10 select-none">
+            NAGMANI
+          </h1>
+
+          {/* Glow Text */}
+          <h1
+            ref={glowRef}
+            className="absolute inset-0 text-8xl md:text-[12rem] font-extrabold tracking-tighter select-none pointer-events-none opacity-90"
+            style={{
+              color: "transparent",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              backgroundImage: `
+                radial-gradient(
+                  290px circle at var(--x) var(--y),
+                  rgba(255,255,255,0.9) 0%,
+                  rgba(168,85,247,0.9) 0%,
+                  rgba(59,130,246,0.7) 20%,
+                  rgba(236,72,153,0.4) 50%,
+                  transparent 80%
+                )
+              `,
+              filter: "blur(8px)",
+              opacity:0.8,
+            }}
+          >
+            NAGMANI
+          </h1>
+        </div>
+
+        {/* Bottom */}
+         <div className="flex items-center justify-between my-4">
+                
+                <p className="text-[0.7rem] font-light tracking-widest uppercase secondary">
+                    Built with ♥ &amp; TypeScript
+                </p>
+            </div>
+     
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+
+@variant dark (&:where(.dark, .dark *));
+
+body {
+  transition: background-color 0.1s ease, color 0.1s ease;
+  font-family: 'Geist', sans-serif;
+}
+
+.secondary {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+.imp span {
+  color: black;
+}
+
+.dark .imp span {
+  color: white;
+}
+
+.slant-divider {
+  height: 32px;
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 4px,
+      rgba(0, 0, 0, 0.12) 4px,
+      rgba(0, 0, 0, 0.12) 5px);
+}
+
+.dark .slant-divider {
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 255, 255, 0.12) 4px,
+      rgba(255, 255, 255, 0.12) 5px);
+}

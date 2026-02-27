@@ -1,3 +1,8 @@
+import devforces from "../assets/924shots_so.png"
+import lovable from "../assets/456shots_so.png"
+import codeforces from "../assets/670shots_so.png"
+import gamble from "../assets/532shots_so.png"
+
 type Project = {
     title: string;
     description: string;
@@ -9,34 +14,34 @@ type Project = {
 
 const projects: Project[] = [
     {
-        title: 'DevCircle',
+        title: 'Devforces',
         description: 'A social platform where developers share projects, ideas, and grow together.',
         status: 'Live',
-        image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&q=80',
+        image: devforces,
         accent: '#1a1a2e',
         href: '#',
     },
     {
-        title: 'Asap',
+        title: 'Lovable',
         description: 'Record studio-quality remote audio and video, locally captured without quality loss.',
         status: 'Building',
-        image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80',
+        image: lovable,
         accent: '#0d1117',
         href: '#',
     },
     {
-        title: 'PulseDB',
+        title: 'Codeforces',
         description: 'Real-time database introspection and query analytics built for backend engineers.',
         status: 'Live',
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+        image: codeforces,
         accent: '#0f2027',
         href: '#',
     },
     {
-        title: 'Lunel',
+        title: '100xGamble',
         description: 'Type-safe end-to-end API layer — generate clients directly from your Rust backend.',
         status: 'Building',
-        image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&q=80',
+        image: gamble,
         accent: '#1a0a00',
         href: '#',
     },
@@ -62,13 +67,12 @@ export default function Projects() {
                         >
                             {/* ── Image block ── */}
                             <div
-                                className="relative   overflow-hidden aspect-video border-b border-black/15 dark:border-white/10"
-                                style={{ background: p.accent }}
+                                className="relative overflow-hidden aspect-video border-b border-black/15 dark:border-white/10 bg-gray-100 dark:bg-[#111]"
                             >
                                 <img
                                     src={p.image}
                                     alt={p.title}
-                                    className="w-full rounded-xl border-2 border-black/50 dark:border-white/20 mix-blend-luminosity h-full object-cover block opacity-75 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-[1.04] group-hover:brightness-110 group-hover:border-black/50 dark:group-hover:border-white/20"
+                                    className="w-full rounded-xl border-2 border-black/50 dark:border-white/20  h-full object-cover block  transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-[1.1] group-hover:brightness-110 group-hover:border-black/50 dark:group-hover:border-white/20"
                                 />
                                 {/* Bottom fade into accent colour */}
 

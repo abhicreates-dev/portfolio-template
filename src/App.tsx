@@ -78,7 +78,7 @@ function App() {
         </div>
 
         {/* ── GitHub Calendar ── */}
-        <div className="m-5 mt-8 sm:mt-12 saturate-0 overflow-x-auto">
+        <div className="m-5 mt-8 sm:mt-12 saturate-0 invert-100 dark:invert-0 overflow-x-auto">
           <GitHubCalendar username="nagmani001" />
         </div>
 

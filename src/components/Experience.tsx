@@ -20,9 +20,9 @@ const experiences: Experience[] = [
         period: 'Jan, 2025 - Present',
         location: 'Remote',
         bullets: [
-            'Built and shipped production full-stack apps for clients across fintech and SaaS.',
-            'Architected REST and WebSocket APIs in TypeScript with strict type safety end-to-end.',
-            'Owned deployments — Docker, Nginx, CI/CD pipelines, and cloud infra from scratch.',
+            'Built and shipped full-stack applications for 3 clients across SaaS, and ed-tech.',
+            'Developed a scalable test-taking platform for an ed-tech client.',
+            'Owned deployments Docker, Nginx, CI/CD pipelines from scratch.',
         ],
         tags: ['TypeScript', 'Node.js', 'React', 'PostgreSQL', 'Docker', 'Nginx'],
     },
@@ -36,7 +36,7 @@ const experiences: Experience[] = [
         bullets: [
             'Contributed features and bug fixes to popular open-source TypeScript/Rust projects.',
             'Improved documentation and onboarding guides adopted by hundreds of developers.',
-            'Reviewed PRs and mentored new contributors on best practices.',
+            'Merged over 7 PRs in 2 different open source projects.',
         ],
         tags: ['Rust', 'TypeScript', 'GitHub Actions', 'Open Source'],
     },

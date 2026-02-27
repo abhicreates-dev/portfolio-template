@@ -43,7 +43,7 @@ export default function Footer2() {
           className="relative inline-block"
         >
           {/* Base Text */}
-          <h1 className="text-8xl md:text-[12rem] font-extrabold tracking-tighter text-white/10 select-none">
+          <h1 className="text-8xl md:text-[12rem] font-extrabold tracking-tighter text-black/10 dark:text-white/10 select-none">
             NAGMANI
           </h1>
 

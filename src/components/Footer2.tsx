@@ -43,14 +43,14 @@ export default function Footer2() {
           className="relative inline-block"
         >
           {/* Base Text */}
-          <h1 className="text-8xl md:text-[12rem] font-extrabold tracking-tighter text-black/10 dark:text-white/10 select-none">
-            NAGMANI
+          <h1 className="text-8xl md:text-[10rem] font-extrabold tracking-tighter text-black/10 dark:text-white/10 select-none">
+            ABHISHEK
           </h1>
 
           {/* Glow Text */}
           <h1
             ref={glowRef}
-            className="absolute inset-0 text-8xl md:text-[12rem] font-extrabold tracking-tighter select-none pointer-events-none opacity-90"
+            className="absolute inset-0 text-8xl md:text-[10rem] font-extrabold tracking-tighter select-none pointer-events-none opacity-90"
             style={{
               color: "transparent",
               WebkitBackgroundClip: "text",
@@ -69,7 +69,7 @@ export default function Footer2() {
               opacity:0.8,
             }}
           >
-            NAGMANI
+            ABHISHEK
           </h1>
         </div>
 

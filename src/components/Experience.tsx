@@ -70,7 +70,7 @@ export default function Experience() {
                                 </div>
 
                                 {/* Company + role */}
-                                <div className="flex-1 min-w-0 px-4 py-4">
+                                <div className="flex-1 min-w-0 px-4 ">
                                     <p className="font-medium text-lg text-gray-900 dark:text-gray-100 leading-tight">{exp.company}</p>
                                     <p className="text-xs font-light text-gray-500 dark:text-gray-400 mt-0.5">{exp.role}</p>
                                 </div>

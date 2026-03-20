@@ -16,7 +16,7 @@ export default function SocialLink({ logo, title, href = '#' }: SocialLinkProps)
                 <img
                     src={logo}
                     alt={title}
-                    className="h-9 w-9 sm:h-12 sm:w-12 md:h-15 md:w-15 border-r border-black/50 dark:border-white/20"
+                    className="h-9 w-9 sm:h-12 sm:w-12 md:h-12 md:w-12 border-r border-black/50 dark:border-white/20"
                 />
                 <div className="text-xs sm:text-sm md:text-lg opacity-50 font-normal ml-2">{title}</div>
             </div>

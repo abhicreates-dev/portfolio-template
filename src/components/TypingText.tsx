@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const WORDS = ['Full Stack Developer', 'Backend', 'Rust Developer','Freelancer', 'Neovim User']
+const WORDS = ['Full Stack Developer', 'Design Engineer', 'Frontend Developer','Freelancer']
 
 const TYPING_SPEED = 80   // ms per character while typing
 const DELETING_SPEED = 40 // ms per character while deleting
